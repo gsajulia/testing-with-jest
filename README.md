@@ -1,1 +1,1 @@
-# testing-with-jest
+this repository was made to store the codes used to explain tests with jest
