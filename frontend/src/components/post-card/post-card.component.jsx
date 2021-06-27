@@ -1,5 +1,5 @@
 /* Styles */
-import './styles.css';
+import './post-card.styles.css';
 
 export const PostCard = ({title, cover, body, id}) => (
         <div className="post">

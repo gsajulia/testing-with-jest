@@ -1,5 +1,5 @@
 /* Styles */
-import './styles.css';
+import './posts.styles.css';
 
 /* Components */
 import { PostCard } from '../post-card/post-card.component';

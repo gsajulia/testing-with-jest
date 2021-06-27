@@ -1,10 +1,11 @@
 import { useEffect, useState, useCallback } from 'react';
 
 /* Styles */
-import './styles.css';
+import './home.styles.css';
 
 /* Components */
 import { Posts } from '../../components/posts/posts.component';
+import { Input } from '../../components/input/input.component';
 
 /* Api */
 import { loadPosts } from './../../api/load-posts';
@@ -49,12 +50,9 @@ export const Home = () => {
                     </>
                 )}
 
-                <input
-                    onChange={handleChange}
-                    value={searchValue}
-                    className="text-input"
-                    type="search"
-                    placeholder="Type your search" />
+                <Input
+                    searchValue={searchValue}
+                    handleChange={handleChange} />
             </div>
 
             {filteredPosts.length > 0 && (
