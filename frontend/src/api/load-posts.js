@@ -1,5 +1,6 @@
-export const loadPosts = async () => {
-    const postsResponse = fetch('https://hp-api.herokuapp.com/api/characters/house/gryffindor');
+export const loadPosts = async (house) => {
+
+    const postsResponse = fetch(`https://hp-api.herokuapp.com/api/characters/house/${house}`);
 
     const [posts] = await Promise.all([postsResponse]);
 

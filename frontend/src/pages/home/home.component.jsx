@@ -12,6 +12,7 @@ import { loadPosts } from './../../api/load-posts';
 
 export const Home = () => {
     const maxPagePosts = 10;
+    const [house, setHouse] = useState("gryffindor");
     const [posts, setPosts] = useState([]);
     const [allPosts, setAllPosts] = useState([]);
     const [searchValue, setSearchValue] = useState('');
@@ -30,39 +31,71 @@ export const Home = () => {
         setSearchValue(value);
     }
 
-    const handleLoadPosts = useCallback(async () => {
-        const postsAndPhotos = await loadPosts();
+    const handleChangeHouse = (e, house) => {
+        setHouse(house);
+    }
+
+    const handleLoadPosts = useCallback(async (house) => {
+        const postsAndPhotos = await loadPosts(house);
 
         setPosts(postsAndPhotos.slice(0, maxPagePosts));
         setAllPosts(postsAndPhotos);
     }, [])
 
     useEffect(() => {
-        handleLoadPosts();
-    }, [handleLoadPosts]);
+        handleLoadPosts(house);
+    }, [handleLoadPosts, house]);
 
     return (
-        <section className="container">
-            <div className="search-container">
-                {!!searchValue && (
-                    <>
-                        <h1>Search value: {searchValue}</h1>
-                    </>
+        <>
+            <header className="header">
+                <h2 className="main-title"> Escolha a casa </h2>
+                <div className="button-container">
+                    <button onClick={(e) => handleChangeHouse(e, "gryffindor")} className="button gryffindor">
+                        <div className="inside-button">
+                            Gryffindor
+                        </div>
+                    </button>
+                    <button onClick={(e) => handleChangeHouse(e, "ravenclaw")} className="button ravenclaw">
+                        <div className="inside-button">
+                            Ravenclaw
+                        </div>
+                    </button>
+                    <button onClick={(e) => handleChangeHouse(e, "slytherin")} className="button slytherin">
+                        <div className="inside-button">
+                            Slytherin
+                        </div>
+                    </button>
+                    <button onClick={(e) => handleChangeHouse(e, "hufflepuff")} className="button hufflepuff">
+                        <div className="inside-button">
+                            Hufflepuff
+                        </div>
+                    </button>
+                </div>
+            </header>
+            <section className="container">
+            <h1 className="house-title"> {house[0].toUpperCase() + house.substr(1)} </h1>
+                <div className="search-container">
+                    {!!searchValue && (
+                        <>
+                            <h1>Search value: {searchValue}</h1>
+                        </>
+                    )}
+
+                    <Input
+                        searchValue={searchValue}
+                        handleChange={handleChange} />
+                </div>
+
+                {filteredPosts.length > 0 && (
+                    <Posts posts={filteredPosts} />
                 )}
 
-                <Input
-                    searchValue={searchValue}
-                    handleChange={handleChange} />
-            </div>
-
-            {filteredPosts.length > 0 && (
-                <Posts posts={filteredPosts} />
-            )}
-
-            {filteredPosts.length === 0 && (
-                <p>Não existem posts</p>
-            )}
-        </section>
+                {filteredPosts.length === 0 && (
+                    <p>Não existem posts</p>
+                )}
+            </section>
+        </>
     )
 
 }
