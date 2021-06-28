@@ -6,12 +6,14 @@ import './home.styles.css';
 /* Components */
 import { Posts } from '../../components/posts/posts.component';
 import { Input } from '../../components/input/input.component';
+import { Button } from '../../components/button/button.component';
 
 /* Api */
 import { loadPosts } from './../../api/load-posts';
 
 export const Home = () => {
     const maxPagePosts = 10;
+    const houseOptions = ["gryffindor", "ravenclaw", "slytherin", "hufflepuff"];
     const [house, setHouse] = useState("gryffindor");
     const [posts, setPosts] = useState([]);
     const [allPosts, setAllPosts] = useState([]);
@@ -31,7 +33,7 @@ export const Home = () => {
         setSearchValue(value);
     }
 
-    const handleChangeHouse = (e, house) => {
+    const handleChangeHouse = (house) => {
         setHouse(house);
     }
 
@@ -51,26 +53,9 @@ export const Home = () => {
             <header className="header">
                 <h2 className="main-title"> Escolha a casa </h2>
                 <div className="button-container">
-                    <button onClick={(e) => handleChangeHouse(e, "gryffindor")} className="button gryffindor">
-                        <div className="inside-button">
-                            Gryffindor
-                        </div>
-                    </button>
-                    <button onClick={(e) => handleChangeHouse(e, "ravenclaw")} className="button ravenclaw">
-                        <div className="inside-button">
-                            Ravenclaw
-                        </div>
-                    </button>
-                    <button onClick={(e) => handleChangeHouse(e, "slytherin")} className="button slytherin">
-                        <div className="inside-button">
-                            Slytherin
-                        </div>
-                    </button>
-                    <button onClick={(e) => handleChangeHouse(e, "hufflepuff")} className="button hufflepuff">
-                        <div className="inside-button">
-                            Hufflepuff
-                        </div>
-                    </button>
+                    {houseOptions.map((elem, index) => (
+                        <Button key={index} buttonValue={elem} handleChange={handleChangeHouse}/>
+                    ))}
                 </div>
             </header>
             <section className="container">
