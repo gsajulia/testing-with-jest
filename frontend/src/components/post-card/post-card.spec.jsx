@@ -3,7 +3,7 @@ import { PostCard } from './post-card.component';
 
 const props = {
     title: 'Harry Potter',
-    body: 'human At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.',
+    body: 'This character interpeted by Daniel Radcliffe is a human of Gryffindor house studant at Hogwarts and born at 31-07-1980 he is half-blood, has green eyes and black hair, his patronus is a stag and his wand core is phoenix feather and is made with holly wood.',
     id: 1,
     cover: 'img/img.png'
 };
@@ -15,6 +15,7 @@ describe('<PostCard />', () => {
       expect(screen.getByAltText('Harry Potter'))
         .toHaveAttribute('src', 'img/img.png');
       expect(screen.getByRole('heading', { name: '1 - Harry Potter' })).toBeInTheDocument();
-      expect(screen.getByText(/At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga./i)).toBeInTheDocument();
+      expect(screen.getByText(/This character interpeted by Daniel Radcliffe is a human of Gryffindor house studant at Hogwarts and born at 31-07-1980 he is half-blood, has green eyes and black hair, his patronus is a stag and his wand core is phoenix feather and is made with holly wood./i))
+        .toBeInTheDocument();
     });
 }); 
