@@ -41,5 +41,7 @@ describe('<Posts />', () => {
       render(<Posts />);
       expect(screen.queryByRole('heading', { name: / - /i }))
         .not.toBeInTheDocument();
+      expect(screen.getByText("There are no posts =("))
+        .toBeInTheDocument();
     });
 });

@@ -71,14 +71,9 @@ export const Home = () => {
                         searchValue={searchValue}
                         handleChange={handleChange} />
                 </div>
-
-                {filteredPosts.length > 0 && (
-                    <Posts posts={filteredPosts} />
-                )}
-
-                {filteredPosts.length === 0 && (
-                    <p>Não existem posts</p>
-                )}
+    
+                <Posts posts={filteredPosts} />
+        
             </section>
         </>
     )

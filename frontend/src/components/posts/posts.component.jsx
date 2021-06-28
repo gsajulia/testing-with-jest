@@ -6,7 +6,7 @@ import { PostCard } from '../post-card/post-card.component';
 
 export const Posts = ({ posts = [] }) => (
   <div className="posts">
-    {posts.map(post => (
+    {posts.length !== 0 ? posts.map(post => (
       <PostCard
         key={post.id}
         title={post.title}
@@ -14,6 +14,6 @@ export const Posts = ({ posts = [] }) => (
         id={post.id}
         cover={post.cover}
       />
-    ))}
+    )) : <p>There are no posts =(</p>}
   </div>
 );
