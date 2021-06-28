@@ -5,20 +5,20 @@ const props = {
   posts: [
     {
       id: 1,
-      title: '1 - Personagem: Harry Potter',
-      body: 'human At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.',
+      title: '1 - Harry Potter',
+      body: 'This character interpeted by Daniel Radcliffe is a human of Gryffindor house studant at Hogwarts and born at 31-07-1980 he is half-blood, has green eyes and black hair, his patronus is a stag and his wand core is phoenix feather and is made with holly wood.',
       cover: 'img/img1.png',
     },
     {
       id: 2,
-      title: '2 - Personagem:Hermione Granger',
-      body: 'human At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.',
+      title: '2 - Hermione Granger',
+      body: 'This character interpeted by Emma Watson is a human of Gryffindor house studant at Hogwarts and born at 19-09-1979 she is muggleborn, has brown eyes and brown hair, her patronus is a otter and her wand core is dragon heartstring and is made with vine wood.',
       cover: 'img/img2.png',
     },
     {
       id: 3,
-      title: '3 - Personagem:Ron Weasley',
-      body: 'human At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga.',
+      title: '3 - Ron Weasley',
+      body: 'This character interpeted by Rupert Grint is a human of Gryffindor house studant at Hogwarts and born at 01-03-1980 he is pure-blood, has blue eyes and red hair, his patronus is a Jack Russell terrier and his wand core is unicorn tail-hair and is made with willow wood.',
       cover: 'img/img3.png',
     },
   ]};
@@ -27,19 +27,19 @@ describe('<Posts />', () => {
     it('should render posts', () => {
       render(<Posts {...props} />);
   
-      expect(screen.getAllByRole('heading', { name: /Personagem/i }))
+      expect(screen.getAllByRole('heading', { name: props.posts.title}))
         .toHaveLength(3);
-      expect(screen.getAllByRole('img', { name: /Personagem/i }))
+      expect(screen.getAllByRole('img', { name: / - /i }))
         .toHaveLength(3);
-      expect(screen.getAllByText(/At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt mollitia animi, id est laborum et dolorum fuga./i))
+      expect(screen.getAllByText(/Gryffindor house/i))
         .toHaveLength(3);
-        expect(screen.getByRole('img', { name: /3 - Personagem:Ron Weasley/i }))
+        expect(screen.getByRole('img', { name: /3 - Ron Weasley/i }))
         .toHaveAttribute('src', 'img/img3.png');
     });
   
     it('should not render posts', () => {
       render(<Posts />);
-      expect(screen.queryByRole('heading', { name: /Personagem/i }))
+      expect(screen.queryByRole('heading', { name: / - /i }))
         .not.toBeInTheDocument();
     });
 });

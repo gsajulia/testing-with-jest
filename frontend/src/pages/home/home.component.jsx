@@ -51,7 +51,7 @@ export const Home = () => {
     return (
         <>
             <header className="header">
-                <h2 className="main-title"> Escolha a casa </h2>
+                <h2 className="main-title"> Choose the house </h2>
                 <div className="button-container">
                     {houseOptions.map((elem, index) => (
                         <Button key={index} buttonValue={elem} handleChange={handleChangeHouse}/>
