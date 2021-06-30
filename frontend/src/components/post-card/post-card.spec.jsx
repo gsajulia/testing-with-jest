@@ -18,4 +18,9 @@ describe('<PostCard />', () => {
       expect(screen.getByText(/This character interpeted by Daniel Radcliffe is a human of Gryffindor house studant at Hogwarts and born at 31-07-1980 he is half-blood, has green eyes and black hair, his patronus is a stag and his wand core is phoenix feather and is made with holly wood./i))
         .toBeInTheDocument();
     });
+
+    it('should match snapshot', () => {
+      const { container } = render(<PostCard {...props} />);
+      expect(container.firstChild).toMatchSnapshot();
+    });
 }); 

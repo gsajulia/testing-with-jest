@@ -1,0 +1,74 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Posts /> should match snapshot 1`] = `
+<div
+  class="posts"
+>
+  <div
+    class="post"
+  >
+    <img
+      alt="1 - Harry Potter"
+      src="img/img1.png"
+    />
+    <div
+      class="post-content"
+    >
+      <h1>
+        <b>
+          1
+           - 
+        </b>
+        1 - Harry Potter
+      </h1>
+      <p>
+        This character interpeted by Daniel Radcliffe is a human of Gryffindor house studant at Hogwarts and born at 31-07-1980 he is half-blood, has green eyes and black hair, his patronus is a stag and his wand core is phoenix feather and is made with holly wood.
+      </p>
+    </div>
+  </div>
+  <div
+    class="post"
+  >
+    <img
+      alt="2 - Hermione Granger"
+      src="img/img2.png"
+    />
+    <div
+      class="post-content"
+    >
+      <h1>
+        <b>
+          2
+           - 
+        </b>
+        2 - Hermione Granger
+      </h1>
+      <p>
+        This character interpeted by Emma Watson is a human of Gryffindor house studant at Hogwarts and born at 19-09-1979 she is muggleborn, has brown eyes and brown hair, her patronus is a otter and her wand core is dragon heartstring and is made with vine wood.
+      </p>
+    </div>
+  </div>
+  <div
+    class="post"
+  >
+    <img
+      alt="3 - Ron Weasley"
+      src="img/img3.png"
+    />
+    <div
+      class="post-content"
+    >
+      <h1>
+        <b>
+          3
+           - 
+        </b>
+        3 - Ron Weasley
+      </h1>
+      <p>
+        This character interpeted by Rupert Grint is a human of Gryffindor house studant at Hogwarts and born at 01-03-1980 he is pure-blood, has blue eyes and red hair, his patronus is a Jack Russell terrier and his wand core is unicorn tail-hair and is made with willow wood.
+      </p>
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> should match snapshot 1`] = `
+<div
+  class="each-button-container"
+>
+  <button
+    class="button undefined"
+  >
+    <div
+      class="inside-button"
+    />
+  </button>
+</div>
+`;

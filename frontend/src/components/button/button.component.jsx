@@ -6,7 +6,8 @@ export const Button = ({ buttonValue, handleChange }) => {
         <div className="each-button-container">
             <button onClick={() => handleChange(buttonValue)} className={`button ${buttonValue}`}>
                 <div className="inside-button">
-                    {buttonValue[0].toUpperCase() + buttonValue.substr(1)}
+                    {buttonValue !== "" &&  buttonValue !== undefined? 
+                        buttonValue[0].toUpperCase() + buttonValue.substr(1) : null}
                 </div>
             </button>
         </div>

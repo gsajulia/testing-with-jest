@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PostCard /> should match snapshot 1`] = `
+<div
+  class="post"
+>
+  <img
+    alt="Harry Potter"
+    src="img/img.png"
+  />
+  <div
+    class="post-content"
+  >
+    <h1>
+      <b>
+        1
+         - 
+      </b>
+      Harry Potter
+    </h1>
+    <p>
+      This character interpeted by Daniel Radcliffe is a human of Gryffindor house studant at Hogwarts and born at 31-07-1980 he is half-blood, has green eyes and black hair, his patronus is a stag and his wand core is phoenix feather and is made with holly wood.
+    </p>
+  </div>
+</div>
+`;

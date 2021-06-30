@@ -44,4 +44,9 @@ describe('<Posts />', () => {
       expect(screen.getByText("There are no posts =("))
         .toBeInTheDocument();
     });
+    
+    it('should match snapshot', () => {
+      const {container} = render(<Posts {...props} />);
+      expect(container.firstChild).toMatchSnapshot();
+    });
 });
