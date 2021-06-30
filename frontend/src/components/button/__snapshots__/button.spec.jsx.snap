@@ -5,11 +5,13 @@ exports[`<Button /> should match snapshot 1`] = `
   class="each-button-container"
 >
   <button
-    class="button undefined"
+    class="button gryffindor"
   >
     <div
       class="inside-button"
-    />
+    >
+      Gryffindor
+    </div>
   </button>
 </div>
 `;
