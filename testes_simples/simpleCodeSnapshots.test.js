@@ -8,17 +8,17 @@ const sumForEach = require('./sumForEach')
 //   print: (val) => 'cinco'
 // });
 
-// expect.addSnapshotSerializer({
-//   test: (val) => val.type && val.value,
-//   print: (val) => `${val.type}: ${val.value}`
-// })
-
-test('adds 3 + 2 to equal 5', () => {
-  expect(sum(3, 2)).toMatchSnapshot();
-});
+expect.addSnapshotSerializer({
+  test: (val) => val.type && val.value,
+  print: (val) => `${val.type}: ${val.value}`
+})
 
 test('adds 3 + 3 to equal 6', () => {
   expect(sum(3, 3)).toMatchSnapshot();
+});
+
+test('adds 3 + 2 to equal 5', () => {
+  expect(sum(3, 2)).toMatchInlineSnapshot(`5`);
 });
 
 test('adding works sanely with decimals', () => {

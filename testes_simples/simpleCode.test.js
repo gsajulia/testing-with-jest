@@ -9,7 +9,7 @@ test('adds 1 + 2 to equal 3', () => {
 
 test('compare two arrays that have the same values', () => {
   const array = [9, 8, 7]
-  expect(copyArray(array)).not.toBe(array);
+  expect(copyArray(array)).toBe(array);
 })
 
 test('copy the array to another variable', () => {

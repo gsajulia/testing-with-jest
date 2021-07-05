@@ -2,8 +2,6 @@
 
 exports[`adding works sanely with decimals 1`] = `0.30000000000000004`;
 
-exports[`adds 3 + 2 to equal 5 1`] = `5`;
-
 exports[`adds 3 + 3 to equal 6 1`] = `6`;
 
 exports[`should return the ingredient of the phrases 1`] = `"oleo"`;
@@ -20,25 +18,10 @@ Array [
 
 exports[`tests the sumForEach function with snapshots 2`] = `
 Array [
-  Object {
-    "type": "return",
-    "value": 10,
-  },
-  Object {
-    "type": "return",
-    "value": 2,
-  },
-  Object {
-    "type": "return",
-    "value": 4,
-  },
-  Object {
-    "type": "return",
-    "value": 4,
-  },
-  Object {
-    "type": "return",
-    "value": 4,
-  },
+  return: 10,
+  return: 2,
+  return: 4,
+  return: 4,
+  return: 4,
 ]
 `;
