@@ -2,7 +2,7 @@
 \
 &nbsp;
 
-Presentation: https://docs.google.com/presentation/d/1ciZoeV9y-hffGOWzNSfASdT1OXfRuqHx1s7EiLkC_7g/edit?usp=sharing 
+Presentation: [docs link!](https://docs.google.com/presentation/d/1ciZoeV9y-hffGOWzNSfASdT1OXfRuqHx1s7EiLkC_7g/edit?usp=sharing)
 
 After cloning the repository, get inside the project folder (the commands below can use npm or yarn)
 
