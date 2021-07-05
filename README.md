@@ -24,6 +24,8 @@ To run the tests
 
 > cd testes_simples
 
+> npm install
+
 To run the tests
 
 > npm test
