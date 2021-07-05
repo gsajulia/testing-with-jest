@@ -4,7 +4,10 @@ Presentation: https://docs.google.com/presentation/d/1ciZoeV9y-hffGOWzNSfASdT1OX
 
 After cloning the repository, get inside the project folder (the commands below can use npm or yarn)
 
-# The frontend folder is for the examples of react with jest-dom
+## The frontend folder is for the examples of react with jest-dom
+\
+&nbsp;
+
 
 > cd frontend
 
@@ -18,7 +21,9 @@ To run the tests
 
 > npm test
 
-# The testes_simples folder is for initial codes with jest (based in jest docs)
+## The testes_simples folder is for initial codes with jest (based in jest docs)
+\
+&nbsp;
 
 > cd testes_simples
 
